@@ -1,7 +1,10 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
+const conn = mongoose.connect('mongodb://localhost/mymoney', 
+            {useMongoClient: true})
 
-module.exports = mongoose.connect('mongodb://localhost/mymoney')
+// module.exports = mongoose.connect('mongodb://localhost/mymoney')
+module.export = conn
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório."
 mongoose.Error.messages.Number.min = 
