@@ -8,7 +8,7 @@ import Row from '../common/layout/row'
 
 class Dashboard extends Component {
   render() {
-    const { credit, debt } = this.props.sumary
+    const { credit, debt } = this.props.summary
     return (
       <div>
         <ContentHeader title="Dashboard" subtitle="Versão 1.0"/>
@@ -29,6 +29,6 @@ class Dashboard extends Component {
   }
 }
 
-const mapStateToProps = state => ({ sumary: state.dashboard.sumary })
+const mapStateToProps = state => ({ summary: state.dashboard.summary })
 
 export default connect(mapStateToProps) (Dashboard)
