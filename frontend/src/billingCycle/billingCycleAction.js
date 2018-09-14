@@ -42,6 +42,14 @@ function submit(values, method) {
   }
 }
 
+export function showUpdate(billingCycles) {
+  return [
+    showTabs('tabUpdate'),
+    selectTab('tabUpdate'),
+    initialize('billingCycleForm', billingCycles)
+  ]
+}
+
 export function showDelete(billingCycles) {
   return [
     showTabs('tabDelete'),
